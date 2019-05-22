@@ -1,0 +1,4 @@
+<h1 *ngIf="estado" class="title-monto">Felicidades, tu credito fue aprobado</h1>
+<h1 *ngIf="!estado">Lo lamentamos, tu credito no fue aprobado</h1>
+<button mat-button class="button" (click)="router.navigate(['/'])">Volver</button>
+

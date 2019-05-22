@@ -1,0 +1,25 @@
+.header{
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: calc(100% - 30px);
+    display: flex
+}
+
+.logo{
+    flex: 1
+}
+
+.monto{
+    flex: 1;
+    text-align: end;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.body{
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: calc(100% - 30px);
+}

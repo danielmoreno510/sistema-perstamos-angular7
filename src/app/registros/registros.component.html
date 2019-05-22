@@ -1,0 +1,39 @@
+<h1 class="title-monto">Registros</h1>
+<br>
+<button mat-button class="button" (click)="aprobados()" style="margin-right: 20px;">Aprobados</button>
+<button mat-button class="button" (click)="noAprobados()">No aprobados</button>
+<br>
+<br>
+<div *ngIf="aprobado">
+  <div class="text-info">Estos son los registros aprobados, si quiere pasar un prestamo de estado no pagado a pagado de clic sobre el</div>
+  <table-primary *ngIf="show"
+    [tablePrimaryId]="'table-primary-1'"
+    [tablePrimaryTypeTable]="'pagination'"
+    [tablePrimaryBackground]="'#81b719'"
+    [tablePrimaryColor]="'#ffffff'"
+    [tablePrimaryQuantityShow]="5"
+    [tablePrimaryQuantityScroll]="5"
+    [tablePrimaryTextAlign]="tablePrimaryTextAlign"
+    [tablePrimaryHead]="tablePrimaryHead"
+    [tablePrimaryBody]="tablePrimaryBody"
+    [tablePrimaryArrayComponents]="tablePrimaryArrayComponents"
+    [tablePrimaryFilters]="tablePrimaryFilters"
+    [tablePrimarySelectOptions]="true">
+  </table-primary>
+</div>
+
+<div *ngIf="noAprobado">
+    <table-primary *ngIf="show"
+    [tablePrimaryId]="'table-primary-1'"
+    [tablePrimaryTypeTable]="'pagination'"
+    [tablePrimaryBackground]="'#81b719'"
+    [tablePrimaryColor]="'#ffffff'"
+    [tablePrimaryQuantityShow]="5"
+    [tablePrimaryQuantityScroll]="5"
+    [tablePrimaryTextAlign]="tablePrimaryTextAlign"
+    [tablePrimaryHead]="tablePrimaryHead"
+    [tablePrimaryBody]="tablePrimaryBody"
+    [tablePrimaryArrayComponents]="tablePrimaryArrayComponents"
+    [tablePrimaryFilters]="tablePrimaryFilters">
+  </table-primary>
+</div>

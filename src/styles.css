@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+    margin: 0;
+    background: #343a40;
+    font-family: Montserrat,sans-serif;
+    color: #fff
+}
+
+h1{
+    font-size: 42px;
+    margin-block-start: 18px;
+    margin-block-end: 18px;
+}
+
+.input-width{
+    width: 280px;
+}
+
+.button{
+    background: #81b719;
+    margin-top: 6px !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: #81b719
+}
+
+.mat-form-field.mat-focused .mat-form-field-label{
+    color: #81b719
+}
+
+.mat-input-element {
+    caret-color: #ffffff;
+}
+
+.text-info{
+    font-size: 16px
+}
+
+.mat-select-arrow {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(255, 255, 255, 0.54);
+}
+
+.mat-datepicker-content .mat-calendar-next-button, .mat-datepicker-content .mat-calendar-previous-button, .mat-datepicker-toggle{
+    color:rgba(255, 255, 255, 0.54);
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+    color: #fff
+}
+
+.mat-select-value {
+    color: #fff
+}
+
+tbody tr:nth-child(odd){
+    background-color: #343a40 !important;
+}
+
+tbody tr{
+    background-color: #414950 !important;
+}
+
+#table-head-fixed-table-primary-1{
+    visibility: hidden;
+}
+
+.input-simple-name{
+    color:#fff !important;
+}
+
+.table-primary-pagination-space{
+    color:#fff !important;
+}
+
+.table-primary-pagination-hover{
+    color:#fff !important;
+}
+
+.table-primary-pagination{
+    color:#fff !important;
+}

@@ -1,0 +1,15 @@
+<div>
+  <div class="header">
+    <div class="logo">
+        <img src="https://www.zinobe.com/assets/images/logo.png" alt="">
+    </div>
+    <div class="monto">
+      Monto Base: {{monto}}
+      <br>
+      <button mat-button class="button" (click)="registros()">Ver Registros</button>
+    </div>
+  </div>
+  <div class="body">
+    <router-outlet (activate)='onActivate($event)'></router-outlet>
+  </div>
+</div>

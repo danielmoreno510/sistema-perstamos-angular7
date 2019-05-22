@@ -1,0 +1,45 @@
+<div *ngIf="monto">
+  <button mat-button class="button" (click)="router.navigate(['/'])"><< Volver</button>
+  <h1 class="title-monto">Datos Personales</h1>
+  <br>
+  <div class="text-info">Digite sus datos personales para solicitar el monto de: {{monto}}</div>
+  <br>
+  <div class="form-datos">
+    <div style="flex: 1">
+      <mat-form-field class="input-width">
+        <input matInput placeholder="Nombre Completo" [formControl]="nombreFormControl" required>
+        <mat-error *ngIf="nombreFormControl.hasError('required')">
+          El Nombre es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="input-width">
+        <input matInput placeholder="Correo Electronico" [formControl]="emailFormControl" required>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Ingrese un Email valido
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          El email es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+    </div>
+
+    <div style="flex: 1">
+      <mat-form-field class="input-width">
+        <input matInput placeholder="Cedula" type="number" [formControl]="cedulaFormControl" required>
+        <mat-error *ngIf="cedulaFormControl.hasError('required')">
+          La cedula es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="input-width">
+        <input matInput [matDatepicker]="picker" placeholder="Fecha Pagar" [(ngModel)]="fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <button mat-button class="button" (click)="solicitar() " [disabled]="emailFormControl.invalid || nombreFormControl.invalid || cedulaFormControl.invalid">Solicitar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h1 class="title-monto">Monto que desea solicitar</h1>
+<br>
+<div class="text-info">Solicite su monto llenando el siguiente campo (recuerde que el valor minimo es {{appGlobals.minimo}} y el maximo es {{appGlobals.maximo}})</div>
+<br>
+<mat-form-field class="input-width">
+  <input matInput placeholder="Monto" type="number" name="monto" [formControl]="montoControl" required>
+  <mat-error>Ingrese un valor entre {{appGlobals.minimo}} y {{appGlobals.maximo}}</mat-error>
+</mat-form-field>
+<br>
+<button mat-button class="button" (click)="solicitar()" [disabled]="montoControl.invalid">Solicitar</button>

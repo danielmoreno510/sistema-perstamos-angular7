@@ -1,0 +1,9 @@
+.form-datos{
+    display: flex
+}
+
+@media screen and (max-width: 768px) {
+    .form-datos{
+        display: block
+    }
+}
